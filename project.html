@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfume</title>
+    <style>
+      body {
+        background: lightgray;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        display: block;
+        max-width: 75%;
+        margin: 0 auto;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.2;
+        font-size: 14px;
+      }
+      .container {
+        max-width: 800px;
+      }
+      .link {
+        display: block;
+        margin: 10px 0 0 0;
+        text-align: center;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      .info {
+        display: block;
+        text-align: center;
+      }
+      button {
+        display: block;
+        margin: 10px auto;
+        background: lightblue;
+        font-size: 20px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0.3);
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>PerfuME</h1>
+      <h2>Find you favorite fragrance</h2>
+      <img
+        src="https://media.cnn.com/api/v1/images/stellar/prod/220707134827-editors-perfume-missdior.jpg?c=16x9&q=h_720,w_1280,c_fill"
+        alt="Perfume"
+      />
+      <p class="info">
+        PerfuME is a fragrance subscription service that delivers a new perfume
+        to the customers each month.
+        <br />
+        <br />
+        PerfuME mission is to give an opportunity to women and men age 18 and up
+        <br />
+
+        in America to express themselves through scent.
+      </p>
+
+      <button class="order-button">Order you Fragrance</button>
+
+      <br />
+      <br />
+      <p class="info">
+        This page was built by
+        <a
+          href="https://www.instagram.com/mariakisel16/"
+          target="_blank"
+          class="link"
+        >
+          Maria Kisel
+        </a>
+      </p>
+    </div>
+    <script>
+      function order() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let email = prompt("What is your email?");
+        if (age >= 18) {
+          alert("Thank you, " + name + "! We'll be in touch with you soon!");
+        } else {
+          alert("Sorry " + name + ". You can't make an order");
+        }
+      }
+      let orderButton = document.querySelector(".order-button");
+      orderButton.addEventListener("click", order);
+    </script>
+  </body>
+</html>
